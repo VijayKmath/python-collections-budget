@@ -1,10 +1,11 @@
+
 import collections
 import matplotlib.pyplot as plt
-from . import Expense
+from budget.Expense import *
 
 
-expenses = Expense.Expenses()
-expenses.read_expenses("data\spending_data.csv")
+expenses = Expenses()
+expenses.read_expenses("c:\Tasks365_New\ML\pyworks\python-collections-budget\data\spending_data.csv")
 
 spending_categories = []
 for expense in expenses.list:
@@ -19,3 +20,4 @@ fig, ax = plt.subplots()  #initialize
 ax.bar(categories, count)
 ax.set_title("# of purchases by category")
 plt.show()
+
